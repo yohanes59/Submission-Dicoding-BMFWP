@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Bookshelf Apps</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+	</head>
+
+	<body>
+		<header class="head_bar">
+			<h1 class="head_bar__title">Bookshelf Apps</h1>
+		</header>
+		<main>
+			<article class="left">
+				<section class="input_section">
+					<h2>Masukkan Buku Baru</h2>
+					<form id="inputBook">
+						<div class="input">
+							<label for="inputBookTitle">Judul</label>
+							<input id="inputBookTitle" type="text" placeholder="Masukkan Judul Buku yang ingin ditambahkan" required />
+						</div>
+						<div class="input">
+							<label for="inputBookAuthor">Penulis</label>
+							<input id="inputBookAuthor" type="text" placeholder="Masukkan nama penulis buku" required />
+						</div>
+						<div class="input">
+							<label for="inputBookYear">Tahun</label>
+							<input id="inputBookYear" type="date" required />
+						</div>
+						<div class="input_inline">
+							<label for="inputBookIsComplete">Selesai dibaca</label>
+							<input id="inputBookIsComplete" type="checkbox" />
+						</div>
+						<button id="bookSubmit" type="submit">Masukkan Buku ke rak</button>
+					</form>
+				</section>
+
+				<section class="search_section">
+					<h2>Cari Buku</h2>
+					<form id="searchBook">
+						<label for="searchBookTitle">Judul</label>
+						<input id="searchBookTitle" type="text" placeholder="Ketikkan judul buku yang ingin dicari" />
+					</form>
+				</section>
+			</article>
+			<article class="right">
+				<section class="book_shelf">
+					<h2>Belum selesai dibaca</h2>
+
+					<div id="incompleteBookshelfList" class="book_list"></div>
+				</section>
+
+				<section class="book_shelf">
+					<h2>Selesai dibaca</h2>
+
+					<div id="completeBookshelfList" class="book_list"></div>
+				</section>
+			</article>
+		</main>
+
+		<footer>
+			<article class="container-footer">
+				<table>
+					<tr>
+						<td class="footer-left">
+							Copyright © 2022 | All rights Reserved Yohanes Cahyadi
+						</td>
+						<td class="footer-right">
+							<div class="scroll-w">
+								<a class="scrollup" id="scrollup" onclick="myScrollup()">
+									<i class="bx bx-up-arrow-alt scrollup_icon"></i>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</article>
+		</footer>
+
+		<script src="js/storage.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
